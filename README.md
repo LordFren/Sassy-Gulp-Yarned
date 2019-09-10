@@ -22,7 +22,7 @@ Based on the original [Sassy-gulp](https://github.com/LordFren/sassy-gulp)
 ## Commands:
 
   * `gulp` - Compiles, but does not minify or uglify assets.
-  * `gulp watch` - Compiles the assets (no minification), serves the site and watches for changes, auto-refreshing the browser.
+  * `gulp watch` - serves the site and watches for changes, auto-refreshing the browser.
   * `npm run lint` - Lints your JS files in `src/js/` folder and displays errors.
   * `gulp clean` - Deletes `dist` folder and its contents.
   * `gulp dist` - Compiles, minifies and uglifies all assets for production.
