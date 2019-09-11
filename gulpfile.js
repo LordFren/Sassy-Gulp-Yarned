@@ -19,8 +19,8 @@ let isProduction = false;
 
 const paths = {
     styles: [
-        "./src/**/*.scss", 
-        "./src/**/*.css",
+        "./src/**/*.scss",
+        "./src/**/*.css"
     ],
     images: [
         "./src/img/**/*.+(png|jpg|jpeg|gif|svg)"
