@@ -7,8 +7,8 @@ Sassy Gulp Yarned is boilerplate developer environment for an easier and faster 
 Based on the original [Sassy-gulp](https://github.com/LordFren/sassy-gulp)
 
 Many Thanks to:
-[Owen Rees](https://github.com/TheRealOwenRees) for finding annoying bugs and fixing them.
-[James Birtles](https://github.com/UnwrittenFun) for guidance and mentorship.
+ * [Owen Rees](https://github.com/TheRealOwenRees) for finding annoying bugs and fixing them.
+ * [James Birtles](https://github.com/UnwrittenFun) for guidance and mentorship.
 
 Without you guys this project could not have been made. Many thanks for your hard work.
 
