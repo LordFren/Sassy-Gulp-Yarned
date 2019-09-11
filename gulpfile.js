@@ -19,7 +19,8 @@ let isProduction = false;
 
 const paths = {
     styles: [
-        "./src/styles/index.scss"
+        "./src/**/*.scss", 
+        "./src/**/*.css",
     ],
     images: [
         "./src/img/**/*.+(png|jpg|jpeg|gif|svg)"
@@ -143,7 +144,7 @@ gulp.task("watch", () => {
     gulp.watch(paths.code, gulp.series("copyCode")).on("change", browserSync.reload);
     gulp.watch(paths.js, gulp.series("copyJs")).on("change", browserSync.reload);
     gulp.watch(paths.images, gulp.series("images")).on("change", browserSync.reload);
-    gulp.watch(["./src/styles/index.scss", "./src/styles/**/*.scss", "./src/styles/**/*.css"], gulp.series("scss"))
+    gulp.watch(paths.styles, gulp.series("scss"))
         .on("change", browserSync.reload); //Invoke when change is detected
 });
 
