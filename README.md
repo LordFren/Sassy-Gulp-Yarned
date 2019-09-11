@@ -6,10 +6,16 @@ Sassy Gulp Yarned is boilerplate developer environment for an easier and faster 
 
 Based on the original [Sassy-gulp](https://github.com/LordFren/sassy-gulp)
 
+Many Thanks to:
+[Owen Rees](https://github.com/TheRealOwenRees) for finding annoying bugs and fixing them.
+[James Birtles](https://github.com/UnwrittenFun) for guidance and mentorship.
+
+Without you guys this project could not have been made. Many thanks for your hard work.
+
 ## Requirements
 
  * Node.js 10.16.0 or higher [Node.js](https://nodejs.org) - [Node.js 10.16.0](https://nodejs.org/dist/v10.16.0/node-v10.16.0-x64.msi)
- * [Yarn](https://yarnpkg.com)
+ * [Yarn](https://yarnpkg.com) - optional but recommended
  * [Gulp 4+](https://gulpjs.com/)
 
 ## Get Started
@@ -22,7 +28,7 @@ Based on the original [Sassy-gulp](https://github.com/LordFren/sassy-gulp)
 ## Commands:
 
   * `gulp` - Compiles, but does not minify or uglify assets.
-  * `gulp watch` - serves the site and watches for changes, auto-refreshing the browser.
+  * `gulp watch` - Serves the site and watches for changes, auto-refreshing the browser.
   * `npm run lint` - Lints your JS files in `src/js/` folder and displays errors.
   * `gulp clean` - Deletes `dist` folder and its contents.
   * `gulp dist` - Compiles, minifies and uglifies all assets for production.
