@@ -12,7 +12,8 @@ const gulp       = require("gulp"),
     newer        = require("gulp-newer"),
     uglify       = require("gulp-uglify"),
     uncss        = require("gulp-uncss"),
-    cssnano      = require("gulp-cssnano");
+    cssnano      = require("gulp-cssnano"),
+    eslint       = require("gulp-eslint");
 
 //Production mode state
 let isProduction = false;
@@ -57,7 +58,7 @@ gulp.task("scss", () =>
         .pipe(gulpif(isProduction, uncss({
             html: ["./src/**/*.+(html|php)"]
         })))
-        .pipe(gulpif(isProduction, cssnano({ //Minify CSS
+        .pipe(gulpif(isProduction, cssnano({//Minify CSS
             discardComments: {removeAll: true} //Remove comments
         })))
         .pipe(gulpif(!isProduction, browserSync.reload({
@@ -129,6 +130,16 @@ gulp.task("clean", done => {
     clean.sync("dist");
     done();
 });
+
+// ESLint lint JS code
+function isFixed(file) {
+    return file.eslint !== null && file.eslint.fixed;
+}
+gulp.task("lint", () => gulp
+    .src(["src/js/*", "./*.js"])
+    .pipe(eslint({fix: true}))
+    .pipe(eslint.format())
+    .pipe(gulpif(isFixed, gulp.dest("./"))));
 
 gulp.task("default", gulp.series("scss", "copyCode", "copyFonts", "copyJs", "useref", "images"));
 
