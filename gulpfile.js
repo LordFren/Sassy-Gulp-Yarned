@@ -13,7 +13,8 @@ const gulp       = require("gulp"),
     uglify       = require("gulp-uglify"),
     uncss        = require("gulp-uncss"),
     cssnano      = require("gulp-cssnano"),
-    eslint       = require("gulp-eslint");
+    eslint       = require("gulp-eslint"),
+    concat       = require('gulp-concat');
 
 //Production mode state
 let isProduction = false;
@@ -54,6 +55,7 @@ gulp.task("scss", () =>
     gulp
         .src(paths.styles)
         .pipe(sass().on("error", sass.logError))
+        .pipe(concat('all.scss'))
         .pipe(rename("style.css"))
         .pipe(gulpif(isProduction, uncss({
             html: ["./src/**/*.+(html|php)"]
